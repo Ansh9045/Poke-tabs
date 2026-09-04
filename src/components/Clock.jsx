@@ -10,7 +10,6 @@ const Clock = () => {
 
     return () => clearInterval(interval)
   }, [])
-  console.log(time)
   return (
     <div className="text-8xl font-black  p-4 text-white">{time.toLocaleTimeString()}</div>
   )
