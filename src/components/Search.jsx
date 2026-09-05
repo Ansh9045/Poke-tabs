@@ -30,8 +30,8 @@ const Search = () => {
   return (
     <>
     <div className="flex border-2 border-[#3ffc89] rounded-xl overflow-hidden">
-      <input type="text" placeholder="Search with Gooogle..." className="py-2 px-4 border-none outline-none bg-[#0c1125] text-white text-lg" onChange={handleInputChange} onKeyDown={handleKeyPress}/>
-      <button className="px-5 py-3 bg-[#3ffc89] text-[#0c1125]" onClick={handleSearch}>
+      <input type="text" placeholder="Search with Gooogle..." className="py-2 px-4 border-none outline-none bg-[#0c1125] text-white text-lg w-[400px] font-serif font-bold" onChange={handleInputChange} onKeyDown={handleKeyPress}/>
+      <button className="px-5 py-3 bg-[#3ffc89] text-[#0c1125] font-bold" onClick={handleSearch}>
         <FontAwesomeIcon icon={faMagnifyingGlass} className="text-lg"/>
       </button>
     </div>

@@ -26,12 +26,10 @@ const typeColours = {
 };
 
 
-const Roll = () => {
-  const [pokemon, setPokemon] = useState(null)
+const Roll = ({pokemon, setPokemon}) => {
   const onClick = async () => {
     try {
       const p = await getRandomPokemon()
-      console.log(pokemon)
       setPokemon(p)
 
     } catch (error) {
