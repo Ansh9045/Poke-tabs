@@ -28,7 +28,7 @@ const Info = ({pokemon}) => {
     )
   }
   return (
-    <div className="text-sm w-[500px] border-2 border-[#3ffc89] font-mono font-bold rounded-xl px-5 py-3" style={{color: typeColours[pokemon.types[0]]}}>
+    <div className="text-sm w-[500px] border-2 font-mono font-bold rounded-xl px-5 py-3" style={{color: typeColours[pokemon.types[0]], borderColor: typeColours[pokemon.types[0]]}}>
       {pokemon.flavorText}
       </div>
   )
