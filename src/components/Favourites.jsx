@@ -25,7 +25,7 @@ const Favourites = () => {
     <div className="grid grid-cols-4 gap-3 p-5 border-2 border-[#3ffc89] rounded-xl">
       {fav.map((item, index) => (
         <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="text-white text-lg font-bold hover:text-[#3ffc89] flex flex-col items-center justify-center">
-          <img src={getFavicon(item.link)} alt="" className="w-8 h-8"  />
+          <img src={getFavicon(item.link)} alt="" className="w-10 h-10  "  />
           <span>{item.name}</span>
         </a>
       ))}

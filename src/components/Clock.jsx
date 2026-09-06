@@ -11,7 +11,7 @@ const Clock = () => {
     return () => clearInterval(interval)
   }, [])
   return (
-    <div className="text-8xl font-black  p-4 text-white">{time.toLocaleTimeString()}</div>
+    <div className="text-7xl font-black text-white">{time.toLocaleTimeString()}</div>
   )
 }
 

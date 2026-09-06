@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const pokeApi = axios.create({
     baseURL: 'https://pokeapi.co/api/v2/',
-    timeout: 10000,
+    timeout: 30000,
 })
 
 const getPokemon = async (id) => {
@@ -25,6 +25,7 @@ const getPokemonSpecies = async (id) => {
 }
 const formatPokemonData = (data, speciesData) => {
     const sprite = data?.sprites?.other?.showdown?.front_default
+    const highResSprite = data?.sprites?.other?.['official-artwork']?.front_default
     
     const flavorText = speciesData?.flavor_text_entries?.find(entry => entry.language.name === 'en')
     if (!data || !speciesData || !sprite || !flavorText) {
@@ -36,7 +37,8 @@ const formatPokemonData = (data, speciesData) => {
         types: data.types.map(t => t.type.name),
         abilities: data.abilities.map(a => a.ability.name),
         sprites: sprite,
-        flavorText: flavorText.flavor_text.replace(/\n|\f/g, ' ')
+        flavorText: flavorText.flavor_text.replace(/\n|\f/g, ' '),
+        highResSprite: highResSprite
     }
 }
 const getRandomPokemon = async () => {

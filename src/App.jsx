@@ -4,6 +4,7 @@ import Search from './components/Search'
 import Favourites from './components/Favourites'
 import Roll from './components/Roll'
 import Info from './components/Info'
+import Guess from './components/Guess'
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
         <div className='flex gap-3'>
           <Roll pokemon={pokemon} setPokemon={setPokemon}/>
           <Favourites/>
+          <Guess/>
         </div>
         <Info pokemon={pokemon}/>
     </div>
